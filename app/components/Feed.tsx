@@ -7,7 +7,7 @@ import { Button } from "@/components/ui/button";
 export default async function Feed() {
   const session = await getServerSession(authOptions);
   return (
-    <div className="lg:border lg:border-gray-500 lg:w-full lg:rounded-4xl min-h-screen lg:px-8">
+    <div className="lg:border lg:border-gray-500 lg:w-full lg:rounded-4xl h-[100vh] lg:px-8">
       <div className="flex justify-between py-4 w-full border-b border-gray-500">
         <Image
           src={session?.user?.image || ""}
