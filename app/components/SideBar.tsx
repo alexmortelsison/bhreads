@@ -1,24 +1,13 @@
 import { HiMenuAlt2 } from "react-icons/hi";
 import { BsPin } from "react-icons/bs";
-import { TbDotsCircleHorizontal } from "react-icons/tb";
-import { IoIosPaper } from "react-icons/io";
 import { BsPerson } from "react-icons/bs";
 import { AiOutlineHeart } from "react-icons/ai";
-import { BiPlus } from "react-icons/bi";
 import { AiOutlineSearch } from "react-icons/ai";
 import { RiHome5Fill } from "react-icons/ri";
 import Image from "next/image";
 import Link from "next/link";
-import {
-  Dialog,
-  DialogContent,
-  DialogTitle,
-  DialogTrigger,
-} from "@/components/ui/dialog";
-import {
-  DropdownMenu,
-  DropdownMenuTrigger,
-} from "@/components/ui/dropdown-menu";
+
+import DialogOpen from "./DialogOpen";
 
 export default function SideBar() {
   return (
@@ -46,29 +35,7 @@ export default function SideBar() {
           />
         </Link>
         <div className="mt-3">
-          <Dialog>
-            <DialogTrigger>
-              <div className="bg-[#161616] px-3 py-2 rounded-2xl cursor-pointer">
-                <BiPlus size={35} />
-              </div>
-            </DialogTrigger>
-            <DialogContent>
-              <DialogTitle>
-                <div className="text-base font-normal flex w-full border-b justify-between pb-2">
-                  <p>Cancel</p>
-                  <p className="font-bold">New bhread</p>
-                  <div className="flex space-x-2 items-center">
-                    <IoIosPaper size={20} />
-                    <DropdownMenu>
-                      <DropdownMenuTrigger>
-                        <TbDotsCircleHorizontal size={20} />
-                      </DropdownMenuTrigger>
-                    </DropdownMenu>
-                  </div>
-                </div>
-              </DialogTitle>
-            </DialogContent>
-          </Dialog>
+          <DialogOpen />
         </div>
         <Link href={"/favorites"}>
           <AiOutlineHeart
