@@ -11,7 +11,7 @@ import DialogOpen from "./DialogOpen";
 
 export default function SideBar() {
   return (
-    <div className="flex flex-col justify-between items-start py-8">
+    <div className="flex flex-col items-start sticky justify-between h-[100vh]">
       <Link href={"/"}>
         <Image
           src={"/b.png"}

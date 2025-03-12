@@ -1,5 +1,13 @@
-import { Dialog, DialogContent, DialogTitle, DialogTrigger } from "@/components/ui/dialog";
-import { DropdownMenu, DropdownMenuTrigger } from "@/components/ui/dropdown-menu";
+import {
+  Dialog,
+  DialogContent,
+  DialogTitle,
+  DialogTrigger,
+} from "@/components/ui/dialog";
+import {
+  DropdownMenu,
+  DropdownMenuTrigger,
+} from "@/components/ui/dropdown-menu";
 import { BiPlus } from "react-icons/bi";
 import { IoIosPaper } from "react-icons/io";
 import { TbDotsCircleHorizontal } from "react-icons/tb";
@@ -14,7 +22,7 @@ export default function DialogOpen() {
       </DialogTrigger>
       <DialogContent>
         <DialogTitle>
-          <div className="text-base font-normal flex w-full border-b justify-between pb-2">
+          <div className="text-base font-normal flex w-full border-b justify-between pb-2 mt-4">
             <p>Cancel</p>
             <p className="font-bold">New bhread</p>
             <div className="flex space-x-2 items-center">
