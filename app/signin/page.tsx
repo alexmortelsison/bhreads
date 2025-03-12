@@ -1,8 +1,14 @@
+"use client";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
+import { signIn, useSession } from "next-auth/react";
 import Image from "next/image";
+import { redirect } from "next/navigation";
 
 export default function Signin() {
+  const { data: session } = useSession();
+
+  if (session) return redirect("/");
   return (
     <div className="relative min-h-screen">
       <div className="">
@@ -36,7 +42,10 @@ export default function Signin() {
         </Button>
         <p className="text-gray-400 font-normal mt-4">Forgot password?</p>
         <p className="text-gray-400 font-normal mt-4">— or —</p>
-        <Button className="lg:w-[400px] mt-2 py-8 bg-transparent border border-gray-400 placeholder:text-base font-normal placeholder:px-2 rounded-2xl w-full">
+        <Button
+          className="lg:w-[400px] mt-2 py-8 bg-transparent border border-gray-400 placeholder:text-base font-normal placeholder:px-2 rounded-2xl w-full cursor-pointer"
+          onClick={() => signIn("google")}
+        >
           <Image
             src={"/google.ico"}
             alt="logo"
